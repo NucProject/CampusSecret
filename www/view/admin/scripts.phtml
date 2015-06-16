@@ -1,0 +1,133 @@
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
+<script src="media/js/bootstrap.min.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="media/js/excanvas.min.js"></script>
+<script src="media/js/respond.min.js"></script>  
+<![endif]-->   
+<script src="media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="media/js/jquery.blockui.min.js" type="text/javascript"></script>  
+<script src="media/js/jquery.cookie.min.js" type="text/javascript"></script>
+<script src="media/js/jquery.uniform.min.js" type="text/javascript" ></script>
+
+<script src="media/js/jquery.flot.js" type="text/javascript"></script>
+<script src="media/js/jquery.flot.resize.js" type="text/javascript"></script>
+<script src="media/js/jquery.pulsate.min.js" type="text/javascript"></script>
+<script src="media/js/date.js" type="text/javascript"></script>
+<script src="media/js/daterangepicker.js" type="text/javascript"></script>     
+<script src="media/js/jquery.gritter.js" type="text/javascript"></script>
+<script src="media/js/fullcalendar.min.js" type="text/javascript"></script>
+<script src="media/js/jquery.easy-pie-chart.js" type="text/javascript"></script>
+<script src="media/js/jquery.sparkline.min.js" type="text/javascript"></script>  
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="media/js/app.js" type="text/javascript"></script>
+<script src="media/js/index.js" type="text/javascript"></script>
+<script src="media/js/md5.js" type="text/javascript"></script>
+<script src="media/js/plupload.full.min.js" type="text/javascript"></script>
+<script src="media/js/qiniu.js" type="text/javascript"></script>
+
+<script src="active-web/config.js" type="text/javascript"></script>
+<script src="active-web/classes.js" type="text/javascript"></script>
+
+<!-- WIDGETS -->
+<script src="media/widgets/dev.js" type="text/javascript"></script>
+<script src="media/widgets/SchoolSelector.js" type="text/javascript"></script>
+<script src="media/widgets/ContentTabPane.js" type="text/javascript"></script>
+<script src="media/widgets/ReportContentTabPane.js" type="text/javascript"></script>
+<script src="media/widgets/AddSecretTabPane.js" type="text/javascript"></script>
+<script src="media/widgets/AddQuestionTabPane.js" type="text/javascript"></script>
+<script src="media/widgets/AdminManagerPane.js" type="text/javascript"></script>
+<script src="media/widgets/AdminSchoolsPane.js" type="text/javascript"></script>
+<script src="media/widgets/AdminVersionTabPane.js" type="text/javascript"></script>
+<!-- WIDGETS -->
+<!-- END PAGE LEVEL SCRIPTS -->  
+<script>
+    jQuery(document).ready(function() {
+        App.init(); // initlayout and core plugins
+        Index.init();
+
+        //Index.initJQVMAP(); // init index page's custom scripts
+        Index.initCalendar(); // init index page's custom scripts
+        Index.initCharts(); // init index page's custom scripts
+        Index.initChat();
+        Index.initMiniCharts();
+        Index.initDashboardDaterange();
+        Index.initIntro();
+
+        activeWeb();
+
+
+
+        var lastPane = $("#secret-row");
+        $('li.first-row-entry').css('background', '#888888');
+
+
+
+
+        // sessionsTabPane.addPolicy('android', 1, '2.0', 'http://www.xiaoyuanmimi.com/download/android/a.apk', false);
+
+        $("ul.sub-menu a").click(function() {
+            var url = $(this).attr("href");
+            var id = url;
+
+            $(this).parent().siblings().css('background', 'none');
+            $(this).parent().css('background', '#888888');
+
+            if (lastPane != null)
+            lastPane.hide();
+
+            var w = $(id);
+            console.log(w);
+            w.show();
+            lastPane = w;
+            return false;
+        });
+
+        $("ul.page-sidebar-menu").delegate('li.start', 'click', function(){
+
+            var j = $(this);
+            j.siblings().removeClass('active');
+            setTimeout(function(){
+                j.addClass('active');
+            }, 150);
+        });
+
+        $("#report-secret-row").hide();
+        $("#report-comment-row").hide();
+        $("#advise-row").hide();
+        $("#add-secret-row").hide();
+        $("#add-question-row").hide();
+        $("#admin-man-row").hide();
+        $("#admin-schools-row").hide();
+        $("#admin-versions-row").hide();
+        $("#dev-row").hide();
+
+
+        var sessionsTabPane = Widget.widgetById("sessions-tab-pane");
+        // TODO: location to lock page if bad session
+        sessionsTabPane.ajax("admin/checkUser", null, function(data){
+            var results = eval("(" + data+ ")");
+            if(results.errorCode == 201){
+                location.href = "/admin/lock";
+            } else {
+                $('body').css('display', '');
+            }
+        });
+
+        $("a.signout").bind('click', function(){
+            sessionsTabPane.ajax("admin/signout", null, function(data) {
+                location.href = "/admin/lock";
+            });
+
+            return false;
+        });
+    });
+
+</script>
+<!-- END JAVASCRIPTS -->
+<script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-37564768-1']);  _gaq.push(['_setDomainName', 'keenthemes.com']);  _gaq.push(['_setAllowLinker', true]);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();</script>

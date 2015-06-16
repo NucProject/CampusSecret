@@ -1,0 +1,35 @@
+<div class="span6" file="tab1.phtml" widget-class="AdminVersionTabPane" widget-id="version-tab-pane">
+    <div class="portlet box blue tabbable">
+        <div class="portlet-title">
+            <div class="caption"><i class="icon-reorder"></i>版本管理</div>
+        </div>
+        <div class="portlet-body">
+            <div class="tabbable portlet-tabs">
+                <ul class="nav nav-tabs">
+
+                    <li class="active"><a class="version" href="#portlet_tab1" data-toggle="tab" tab="pub">安卓版本管理</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="portlet_tab1">
+                        <div class="versions-published-list"></div>
+                        <div class="summary" style="margin:0 24px" >
+                            <input class="old_version" style="width:60px">&nbsp;&nbsp;
+                            <input class="new_version" style="width:60px">&nbsp;&nbsp;
+                            <input class="down_load" style="width:250px">&nbsp;&nbsp;
+
+                            <select class="select_version_option" style="margin:5px">
+                                <option value="0">不更新</option>
+                                <option value="3">一般更新</option>
+                                <option value="1">推荐更新</option>
+                                <option value="2">强制更新</option>
+                                <option value="-1">废弃</option>
+                            </select>
+                        </div>
+                        <a class="btn blue finish-version" href="javascript:" style="margin:20px 300px">提交</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

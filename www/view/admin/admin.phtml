@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<?php $this->partial("admin/style") ?>
+
+<?php $this->partial("admin/scripts") ?>
+<body class="page-header-fixed" style="display: none">
+
+	<!-- header -->
+	<?php $this->partial("admin/header") ?>
+
+	<!-- BEGIN CONTAINER -->
+	<div class="page-container">
+
+		<!-- Sidebar -->
+		<?php $this->partial("admin/sidebar") ?>
+
+		<!-- BEGIN PAGE -->
+		<div class="page-content">
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<div id="portlet-config" class="modal hide">
+				<div class="modal-header">
+					<button data-dismiss="modal" class="close" type="button"></button>
+					<h3>Widget Settings</h3>
+				</div>
+				<div class="modal-body">
+					Widget settings form goes here
+				</div>
+			</div>
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+			<!-- BEGIN PAGE CONTAINER-->
+			<div class="container-fluid">
+				<!-- BEGIN PAGE HEADER-->
+				<div class="row-fluid">
+					<div class="span12">
+						<!-- BEGIN STYLE CUSTOMIZER -->
+						<!-- customized.phtml -->
+						<!-- END BEGIN STYLE CUSTOMIZER -->
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+						<h3 class="page-title">&nbsp;校园秘密&nbsp;<small>信息管理</small></h3>
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home"></i>
+								<a href="index.html">Home</a>
+								<i class="icon-angle-right"></i>
+							</li>
+							<li><a href="#">Dashboard</a></li>
+							<li class="pull-right no-text-shadow">
+								<div id="dashboard-report-range" class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive" data-tablet="" data-desktop="tooltips" data-placement="top" data-original-title="Change dashboard date range">
+									<i class="icon-calendar"></i>
+									<span></span>
+									<i class="icon-angle-down"></i>
+								</div>
+							</li>
+						</ul>
+						<!-- END PAGE TITLE & BREADCRUMB-->
+					</div>
+				</div>
+				<!-- END PAGE HEADER-->
+
+				<!-- dashboard begin -->
+				<div id="dashboard">
+					<!-- BEGIN DASHBOARD STATS -->
+					<!--
+					<?php $this->partial("admin/dashboard"); ?>
+					-->
+					<!-- END DASHBOARD STATS -->
+					<div class="clearfix"></div>
+
+					<div class="row-fluid " id="secret-row">
+						<?php $this->partial("admin/secretstab"); ?>
+						<?php $this->partial("admin/commentstab"); ?>
+						<div class="clearfix"></div>
+					</div>
+
+                    <div class="row-fluid " id="report-secret-row">
+                        <?php $this->partial("admin/reportsecretstab"); ?>
+                        <?php $this->partial("admin/commentstab"); ?>
+                        <div class="clearfix"></div>
+                    </div>
+
+					<div class="row-fluid" id="report-comment-row">
+						<?php $this->partial("admin/reportcommentstab"); ?>
+						<div class="clearfix"></div>
+					</div>
+
+                    <div class="row-fluid" id="advise-row">
+                        <?php $this->partial("admin/advisetab"); ?>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="row-fluid" id="add-secret-row">
+                        <?php $this->partial("admin/addsecrettab"); ?>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="row-fluid" id="add-question-row">
+                        <?php $this->partial('admin/addquestiontab'); ?>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="row-fluid" id="admin-man-row">
+                        <?php $this->partial("admin/adminman"); ?>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="row-fluid" id="admin-schools-row">
+                        <?php $this->partial("admin/adminschools"); ?>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="row-fluid" id="admin-versions-row">
+                        <?php $this->partial("admin/adminversions"); ?>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="row-fluid" id="dev-row">
+                        <?php $this->partial("admin/sessions"); ?>
+                        <?php $this->partial("admin/redis"); ?>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+				<!-- dashboard end -->
+			</div>
+			<!-- END PAGE CONTAINER-->    
+		</div>
+		<!-- END PAGE -->
+	</div>
+	<!-- END CONTAINER -->
+
+	<!-- #################################### -->
+	<!-- BEGIN FOOTER -->
+	<div class="footer">
+		<div class="footer-inner">
+			2013 &copy; Metronic by keenthemes.
+		</div>
+		<div class="footer-tools">
+			<span class="go-top">
+			<i class="icon-angle-up"></i>
+			</span>
+		</div>
+	</div>
+	<!-- END FOOTER -->
+</body>
+<!-- END BODY -->
+</html>

@@ -1,0 +1,33 @@
+<div class="span12" file="tab-add-secret.phtml" widget-class="AddQuestionTabPane" widget-id="add-secret-tab-pane">
+	<div class="portlet box blue tabbable">
+		<div class="portlet-title">
+			<div class="caption"><i class="icon-reorder"></i>添加提问</div>
+		</div>
+		<div class="portlet-body">
+			<div class="tabbable portlet-tabs">
+				<ul class="nav nav-tabs">
+                    <li><a class="admin-questions" href="#published_question_tab" data-toggle="tab">已发布</a></li>
+                    <li class="active"><a href="#add_question_tab" data-toggle="tab">发布</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="add_question_tab">
+                        <div>
+                            <img class="picture" style="position:relative;width:320px;height:320px;margin:10px;padding:3px;border:1px dashed;" alt="无图片">
+                            </img>
+                            <div class="question-content" style="position:absolute;top:0px;left:0px;width:320px;height:320px;margin:10px;padding:3px;border:1px dashed;" >
+                                <div style="padding:0 30px;height:320px;width:320px;color:#ffffff;font:24px/1.5  Arial, 'Microsoft Yahei', '微软雅黑'; display: table-cell; vertical-align: middle;text-align: center;word-break: break-all" contenteditable="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="clear: both"></div>
+                        <a class="btn blue add-photo" id="pickphoto2" href="javascript:">添加照片</a>
+                        <a class="btn blue add-question" href="javascript:">添加</a>
+					</div>
+                    <div class="tab-pane" id="published_question_tab">
+                        <div class="published-question-tab"></div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

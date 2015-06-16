@@ -1,0 +1,40 @@
+<div class="span6" file="tab1.phtml" widget-class="AdminManagerPane" widget-id="admin-man-pane">
+	<div class="portlet box blue tabbable">
+		<div class="portlet-title">
+			<div class="caption"><i class="icon-reorder"></i>账号管理</div>
+		</div>
+		<div class="portlet-body">
+			<div class="tabbable portlet-tabs">
+				<ul class="nav nav-tabs">
+					<li><a href="#add_admin_tab" data-toggle="tab" tab="add">添加</a></li>
+                    <li class="active"><a href="#man_admin_tab" data-toggle="tab" tab="man">管理</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="man_admin_tab">
+						<div class="admin-list"></div>
+					</div>
+					<div class="tab-pane" id="add_admin_tab">
+
+                        <table>
+                            <tr>
+                                <td>用户名</td><td><input class="username" type="text"/></td>
+                            </tr>
+                            <tr>
+                                <td>密码</td><td><input class="password" type="password"/></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <a class="btn add-admin blue">添加</a>
+                                </td>
+                            </tr>
+                        </table>
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

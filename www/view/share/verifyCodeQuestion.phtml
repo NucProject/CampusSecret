@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <base href="/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="media/share/one.css" type="text/css" media="screen" />
+
+    <title>{{ title }}</title>
+</head>
+<body style="overflow-x:hidden;" >
+<div class="wrapper" >
+    <div class="main1">
+        <br/>
+        <p style="color:red;font-size:14px">由于近期运营商正在调整短信规则，可能造成您接收短信延时或无法接收，请尝试重新发送或联系运营商。</p>
+        <br/>
+        1.验证码由四位随机数字组成；<br/>
+        2.验证码有效期为30分钟，过期后请重新获取校验码；<br/>
+        3.每隔120秒，可重新获取一次验证码；<br/>
+        4.重新获取验证码后，原验证码同时失效，请在相应页面填写最新的验证码；<br/>
+        5.验证码验证成功一次后即失效；<br/>
+        6.当您无法收到验证码短信时，请逐一排查以下原因：<br/>
+        &nbsp;&nbsp;（1）手机话费不足或其他原因停机。<br/>
+        &nbsp;&nbsp;（2）手机网络状况不佳。<br/>
+        &nbsp;&nbsp;（3）短信收件箱已满。<br/>
+        &nbsp;&nbsp;（4）被手机安全软件误判而拦截。<br/>
+        如确认以上四点没问题后，依然没有收到验证码，请点击这里<a href="" style="text-decoration-line: none;text-decoration-color: #aab5bc">反馈问题</a>。<br/>
+
+    </div>
+</div>
+<script>
+    if (/Mobile/i.test(navigator.userAgent)) {
+        var secretEle = document.querySelector('.secret');
+        secretEle.style.height = document.documentElement.clientWidth + 'px';
+    }
+</script>
+</body>
+</html>

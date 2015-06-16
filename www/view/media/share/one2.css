@@ -1,0 +1,767 @@
+.i {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(icons_1x.png);
+    background-image: image-set(url(icons_1x.png) 1x, url(icons_2x.png) 2x);
+    background-image: -webkit-image-set(url(icons_1x.png) 1x, url(icons_2x.png) 2x);
+    background-image: -moz-image-set(url(icons_1x.png) 1x, url(icons_2x.png) 2x);
+    background-image: -ms-image-set(url(icons_1x.png) 1x, url(icons_2x.png) 2x);
+    background-repeat: no-repeat;
+}
+
+/* 评论图标 */
+.i-comment {
+    background-position: -24px -132px;
+}
+.blank .i-comment {
+    background-position: 1px -132px;
+}
+/* 喜欢图片 */
+.i-like {
+    background-position: -24px -108px;
+}
+.blank .i-like {
+    background-position: 0 -108px;
+}
+.i-like.ed,
+.blank .i-like.ed {
+    background-position: -48px -108px;
+}
+.i-like-b {
+    background-position: 0 -24px;
+}
+.i-like-b.ed {
+    background-position: -24px -24px;
+}
+/* 更多图标 */
+.i-more {
+    background-position: -24px -154px;
+}
+.blank .i-more {
+    background-position: 0 -154px;
+}
+/* background选择图标 */
+.i-panel {
+    width: 30px;
+    background-position: -30px -183px;
+}
+.i-panel.ed {
+    background-position: 0 -183px;
+}
+/* secret detail close */
+.i-close {
+    background-position: -24px 0;
+}
+.i-close-2 {
+    background-position: 0 0;
+}
+
+
+/*
+-------
+*/
+
+ul,
+li {
+    list-style: none;
+}
+html {
+    background: #acbea8 url(/static/images/share_pc_bg.jpg) no-repeat top center;
+    background-attachment: fixed;
+}
+body {
+    padding: 62px 0 240px;
+}
+
+
+.wrapper {
+    margin: auto;
+    width:100%;
+}
+.wrapper:after {
+    overflow: hidden;
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+    content: '';
+}
+.main {
+
+
+}
+
+.main1{
+    margin:5px 10px 5px 10px;
+    font-size:16px;
+    color:black;
+    word-break:break-all;
+
+}
+.secret {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    height: 452px;
+    background-color: #fff;
+    color: #fff;
+}
+.secret .i {
+    vertical-align: -6px;
+}
+.secret.blank {
+    color: #535353;
+}
+.secret .bg {
+
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+    background-color:#148c78;
+    margin:auto auto;
+
+}
+.secret .bg .pic {
+
+    position:relative;
+    width: 120px;
+    height:150px;
+    margin:0 auto;
+
+}
+
+.secret .bg .pic img{
+    position:relative;
+    top:30px;
+
+}
+
+
+
+.secret table {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+    word-break: break-word;
+}
+.secret .content {
+    overflow: hidden;
+    font-size: 26px;
+    width: 12.8em;
+    max-height: 320px;
+    line-height: 32px;
+    margin: auto;
+}
+.secret .bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+.secret .bottom .circle {
+    float: left;
+    padding: 0 10px;
+}
+.secret .bottom .relates {
+    float: right;
+    padding: 0 12px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.secret .bottom2 {
+
+    position:relative;
+    display:block;
+    width:320px;
+    height:80px;
+    text-align:center;
+    top:16px;
+    margin:0 auto;
+}
+
+
+.secret .bottom2 .slogan1{
+    display: block;
+    text-align:center;
+    font-size:28px;
+    font-family: Arial, "Microsoft Yahei", "微软雅黑";
+    position:relative;
+    top: 10px;
+
+}
+
+
+.secret .bottom2 .slogan2{
+    display: block;
+    text-align:center;
+    position:relative;
+    font-size:18px;
+    font-family:Arial, "Microsoft Yahei", "微软雅黑";
+    top:44px;
+}
+
+.downloadlink{
+    position:relative;
+    width:146px;
+    margin:0 auto;
+    top:20px;
+
+}
+
+
+.downloadlink .iphone {
+    display:block;
+    height:52px;
+    width:156px;
+}
+
+.downloadlink .iphone img{
+    margin:auto auto;
+    height:52px;
+}
+
+.downloadlink .iphone .left {
+    background-color: #000000;
+}
+
+.downloadlink .iphone .left b {
+    background-position: 10px 5px;
+    background-repeat: no-repeat;
+    background-image: url('/media/image_web/iOS.png');
+    background-size: 36px 42px;
+    width: 36px;
+    height: 42px;
+}
+
+
+.downloadlink .iphone .right {
+    background-color: #000000;
+    color: #FFF;
+    font-family: Arial, "Microsoft Yahei", "微软雅黑";
+
+}
+
+.downloadlink .android {
+    display:block;
+    height:56px;
+    width:156px;
+}
+
+.downloadlink .android img{
+    margin:auto auto;
+    height:56px;
+}
+
+.downloadlink .android .left {
+    background-color: #000000;
+}
+
+.downloadlink .android .left b {
+    background-position: 10px 6px;
+    background-repeat: no-repeat;
+    background-image: url('/media/image_web/Android.png');
+    background-size: 36px 42px;
+    width: 36px;
+    height: 42px;
+}
+
+.downloadlink .android .right {
+    background-color: #000000;
+    color: #FFF;
+    font-family:Arial, "Microsoft Yahei", "微软雅黑";
+}
+
+.downloadlink .download {
+    display: block;
+    position:relative;
+    margin:auto auto;
+
+    width:146px;
+
+    z-index: 10;
+}
+
+.downloadlink .download .left {
+    display: inline-block;
+    width: 48px;
+    height: 56px;
+
+    text-align: center;
+    float: left;
+    border-radius: 2px 0px 0px 2px;
+}
+
+.downloadlink .download .left b {
+    display: inline-block;
+    width: 48px;
+    height: 52px;
+    font-style:normal;
+}
+
+.downloadlink .download .right {
+    /* display: table-cell; */
+    display: inline-block;
+    height: 52px;
+    padding-top: 4px;
+    top:0px;
+    line-height: 23px;
+    vertical-align: middle;
+    width: 98px;
+    text-align: center;
+    border-radius: 0px 2px 2px 0px;
+    font-size: 14px;
+    font-family:Arial, "Microsoft Yahei", "微软雅黑";
+    font-weight: normal;
+
+}
+
+.secret .relates div {
+    display: inline-block;
+    padding-left: 18px;
+    *display: inline;
+    *zoom: 1;
+}
+.comments {
+    overflow: hidden;
+    background-color: #fff;
+}
+.comments ul {
+    position: relative;
+    top: -1px;
+    padding: 0 14px;
+}
+.comments li {
+    display: table;
+    position: relative;
+    width: 100%;
+    *clear: both;
+
+}
+.comments li .container {
+    display: table-row;
+}
+
+.comments li .portrait,
+.comments li .content {
+    display: table-cell;
+    vertical-align: top;
+}
+.comments li .portrait {
+    width: 56px;
+    padding: 20px 15px 10px 0;
+    *float: left;
+}
+.comments .portrait .head {
+    overflow: hidden;
+    width: 56px;
+    height: 56px;
+    border-radius: 32px;
+}
+
+
+.comments .head img {
+    width: 100%;
+    height: 100%;
+}
+.comments li .content {
+    position: relative;
+    padding: 26px 0 8px;
+    color: #787b7e;
+    *float: left;
+    *width: 200px;
+}
+.comments .content p {
+    line-height: 24px;
+    font-size: 18px;
+    text-align: justify;
+    word-break: break-word;
+}
+
+.comments .author .content p {
+    color: #1abc9c;
+}
+.comments .content div {
+    margin-top: 3px;
+    color: #afb3b6;
+    font-size: 14px;
+}
+.comments .content div .like {
+    padding-left: 10px;
+}
+.comments .content .i {
+    margin-right: 4px;
+    vertical-align: -1px;
+}
+
+.comments2 {
+    overflow: hidden;
+    background-color: #fff;
+    width:100%;
+    position:relative;
+    height:200px;
+
+
+}
+
+.comments2 .text{
+    display:block;
+    position:relative;
+    margin:0 auto;
+    width:240px;
+}
+.comments2 ul {
+    top:20px;
+    position: relative;
+    top: px;
+
+
+}
+.comments2 li {
+    display: table;
+    position: relative;
+    *clear: both;
+    text-align: center;
+    margin:auto auto;
+}
+.comments2 li .container {
+    display: inline;
+    text-align: center;
+}
+
+.comments2 li .portrait {
+
+    width: 30px;
+    height: 30px;
+    padding: 10px 5px 0 0;
+    float: left;
+    text-align: center;
+}
+.comments2 .portrait .head {
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+
+}
+
+
+.comments2 .portrait img {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position:relative;
+    right:6px;
+}
+
+.comments2 li .content {
+    position: relative;
+    padding:   15px 0 0px 0;
+    color: #787b7e;
+    *float: left;
+    width: 270px;
+}
+.comments2 .content p {
+    line-height: 24px;
+    font-size: 18px;
+    text-align: justify;
+    word-break: break-word;
+    font-family: Arial, "Microsoft Yahei", "微软雅黑";
+    font-weight: normal;
+    color:black;
+
+
+}
+
+
+
+.btn-more {
+    display: block;
+    width: 230px;
+    height: 60px;
+    margin: 40px auto;
+    background: url(more.png) center no-repeat;
+}
+/* download bar */
+.app-download {
+    display: block;
+    width: 100%;
+    height: 82px;
+    margin: 40px 0;
+    background: url(/static/images/share_download_pc_v3.png) no-repeat;
+    cursor: pointer;
+}
+.app-download a {
+    display: block;
+    height: 100%;
+}
+.app-download img {
+    display: none;
+}
+.guidance {
+    padding: 18px 18px 57px;
+    background-color: #fefefe;
+    background-color: rgba(255, 255, 255, .28);
+    color: #3d464b\0;
+    *color: #3d464b;
+}
+.guidance .user {
+    margin: 76px 0 94px;
+    font-size: 24px;
+    color: #fff;
+}
+.guidance .user i {
+    display: inline-block;
+    width: 74px;
+    height: 74px;
+    margin-right: 22px;
+    background: url(/static/images/guidance_head.png) no-repeat;
+    vertical-align: middle;
+}
+.guidance .words {
+    position: relative;
+    height: 416px;
+    border: 1px solid;
+    border-color: #fff;
+    border-color: rgba(255, 255, 255, .7);
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, .35);
+}
+.guidance .words table {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.guidance .words td {
+    vertical-align: middle;
+}
+.guidance .words .content {
+    width: 12.8em;
+    max-height: 320px;
+    margin: auto;
+    line-height: 32px;
+    font-size: 26px;
+    text-align: center;
+    word-break: break-word;
+    color: #fff;
+    color: #3d464b\0;
+    *color: #3d464b;
+}
+.guidance .words .bg {
+    display: none;
+}
+@media screen and (max-width: 480px) {
+    html {
+        background: url(/static/images/share_bg.png) repeat;
+    }
+    body {
+        padding-top: 0;
+        padding-bottom: 50px;
+        background: inherit;
+    }
+    .wrapper {
+        width: 100%;
+    }
+    .main {
+        width: 100%;
+    }
+    .secret {
+        height: 320px;
+    }
+    .secret .content {
+        max-height: 12em;
+        line-height: 1.2em;
+    }
+    .comments li .portrait {
+        width: 40px;
+        padding: 14px 6px 14px 0;
+        *float: left;
+    }
+    .comments .portrait .head {
+        overflow: hidden;
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+    }
+    .comments li .content {
+        padding: 16px 0 6px;
+    }
+    .comments .content p {
+        line-height: 20px;
+        font-size: 16px;
+    }
+    .comments .content div {
+        font-size: 12px;
+    }
+    .btn-more {
+        width: 145px;
+        height: 40px;
+        margin: 22px auto;
+        background: url(more.png) center no-repeat;
+        background-size: 145px 40px;
+    }
+    /* download bar */
+    .app-download {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        margin: 0;
+        background: rgba(56, 58, 70, .8);
+        text-align: center;
+        -webkit-transition: .1s all ease-in;
+    }
+    .app-download a {
+        overflow: hidden;
+        display: block;
+        height: 32px;
+        line-height: 0;
+        padding: 9px 10px;
+        text-decoration: none;
+    }
+    .app-download img {
+        display: block;
+        height: 100%;
+    }
+    .app-download .text {
+        float: left;
+    }
+    .app-download .app-logo {
+        float: right;
+    }
+    @media only screen and (min-aspect-ratio: 1/1) {
+        .app-download {
+            display: none;
+        }
+    }
+    .guidance {
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: inherit;
+    }
+    .guidance .user {
+        margin: 24px 18px 42px;
+        font-size: 20px;
+        color: inherit;
+    }
+    .guidance .user i {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+    }
+    .guidance .words {
+        height: 320px;
+        border: none;
+    }
+    .guidance .words .content {
+        max-height: 12em;
+        line-height: 1.2em;
+    }
+    .guidance .words.blank .content {
+        color: #3d464b;
+    }
+    .guidance .words .bg {
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .guidance .words .bg img {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 359px) {
+    .secret .content,
+    .guidance .words .content {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 480px) and (min-width: 360px) {
+    .secret .content,
+    .guidance .words .content {
+        font-size: 23px;
+    }
+}
+
+/**/
+html {
+    background-color: #fff;
+    color: #535353;
+}
+
+html, body, div, p, blockquote, form, textarea, input,
+ul, li, ol, dl, dt, dd,
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body, input, textarea, button, select {
+    font: 16px/1.5 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+}
+
+/* for mobile */
+input, button, select, textarea {
+    -webkit-appearance:none;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+img {
+    border: none;
+}
+
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 18px;
+}
+h4, h5, h6 {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.end{
+
+
+    width:100%;
+    background-color:#148c78;
+    padding-top: 4px;
+
+}
+
+.end p{
+    font-weight: normal;
+    text-align:center;
+    font-size:10px;
+    color: white;
+    font-family:Arial, "Microsoft Yahei", "微软雅黑";
+}

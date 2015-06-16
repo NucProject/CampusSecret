@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<base href="/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no">
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(function(){
+            $('li.question').bind('click', function(){
+                $(this).siblings().find('div').slideUp();
+                $(this).siblings().find('span').removeClass('current')
+                $(this).find('span').addClass('current');
+                $(this).find('div').slideToggle();
+            });
+        });
+    </script>
+<link rel="stylesheet" href="media/share/one.css" type="text/css" media="screen" />
+<style type="text/css">
+    .main {
+        margin-top: 10px;
+    }
+
+    .question {
+        margin-left: 30px;
+        list-style: circle;
+    }
+
+
+    .question span.current
+    {
+        color: rgb(31, 189, 158);
+    }
+    .answer {
+        margin-left: 0px;
+    }
+</style>
+<title>{{ title }}</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <ul>
+
+                {% for qa in questions %}
+                    <li class='question'>
+                        <span>{{ qa['q'] }}</span>
+                        <div class='answer' style='display:none'>{{ qa['a'] }}</div>
+                        <hr size="1" style="border:0;border-bottom:1px solid #cccccc;">
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
